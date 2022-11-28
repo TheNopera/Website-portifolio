@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.aboutMe {
+    border-bottom: 5px;
+    border-style: solid;
+    border-right: 0;
+   
+    
+}
+
+.aboutMe h1 {
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    font-size: 240px;
+    line-height: 90%;
+}
+
+.row1,.row2 { 
+    margin-left: 6rem;
+    justify-content: center;
+    white-space: nowrap;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0%;
+}
+
+.fullOrange {
+    color: #FF6F1E;
+}
+
+.orangeStroke {
+    color: transparent;
+    -webkit-text-stroke: 3px #FF6F1E;
+}
+
+.blackStroke {
+    padding: 1rem;
+}
+
+.musashi1 {
+    position: absolute;
+    width: 285px;
+    left: 834px;
+    top: -31px;
+    z-index: 1;
+}
+
+
+
+.aboutMe .button {
+    width: 60px;
+    position: absolute;
+    left: 6rem;
+    top: 420px;
+}
