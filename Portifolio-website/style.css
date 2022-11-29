@@ -3,11 +3,12 @@ body {
     overflow-x: hidden;
 }
 
-input{
+input {
     display: none;
 }
 
 .aboutMe {
+
     border-bottom: 5px;
     border-style: solid;
     border-right: 0;
@@ -25,56 +26,71 @@ input{
 }
 
 
-.aboutMe .button {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    background-color: #CAE4E5;
-    border-radius: 100%;
-    left: 4rem;
-    top: 29.6rem;
-    
-}
+
 
 /* BUTTON ANIMATION */
 
-label{
-   
+.Bg {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: #CAE4E5;
+    left: 4rem;
+    top: 29.3rem;
+    cursor: pointer;
+}
+
+.Icon {
+    left: 5.2rem;
+    top: 31.4rem;
     width: 2rem;
     height: 0.3rem;
     position: absolute;
     cursor: pointer;
-    
+}
 
-
-}    
-label::before,
-label::after{
+.Icon::before,
+.Icon::after {
     content: '';
     width: 2rem;
     height: 0.3rem;
     background-color: black;
     position: absolute;
     display: block;
-    transition: all 0.6s cubic-bezier(1,0,0,1);
+    transition: all 0.6s cubic-bezier(1, 0, 0, 1);
 }
 
 
-label::before{
+.Icon::before {
     transform: rotate(45deg);
     left: -0.6rem;
 }
-label::after{
+
+.Icon::after {
     transform: rotate(135deg);
     left: 0.6rem;
 }
 
-#toggle:checked ~label::after{
+#toggle:checked~.Icon::after {
     transform: rotate(-135deg);
-    
+
 }
 
 
-#toggle:checked ~ label::before{
-  transform: rotate(-45deg);
+#toggle:checked~.Icon::before {
+    transform: rotate(-45deg);
+}
+
+/* dropdown 1 */
+.dropdown1 {
+   padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+#toggle:checked ~ .dropdown1{
+    max-height: 100vh;
 }
