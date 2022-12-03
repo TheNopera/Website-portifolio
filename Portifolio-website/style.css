@@ -8,50 +8,59 @@ input {
 }
 
 .aboutMe {
+    text-align: center;
+    position: relative;
 
-    border-bottom: 5px;
-    border-style: solid;
-    border-right: 0;
     background-image: url('./images/whoAmI.png');
     background-repeat: repeat;
 
 }
 
+.background{
+    padding: 1rem;
+    border-bottom: 3px solid #000;
+}
+
 .musashi1 {
-    position: absolute;
     width: 285px;
-    left: 834px;
-    top: 10px;
     z-index: 1;
 }
 
-
+.dropdown{
+    position: relative;
+}
 
 
 /* BUTTON ANIMATION */
 
-.Bg {
+.Bg, .Bg2, .Bg3, .Bg4{
     width: 70px;
     height: 70px;
     border-radius: 100%;
     position: absolute;
+    z-index: 1;
     background-color: #CAE4E5;
     left: 4rem;
-    top: 29.3rem;
+    top: -2rem;
     cursor: pointer;
 }
 
-.Icon {
+.Icon, .Icon2,.Icon3, .Icon4{
     left: 5.2rem;
-    top: 31.4rem;
+    top: 0.3rem;
     width: 2rem;
+    z-index: 2;
     height: 0.3rem;
     position: absolute;
     cursor: pointer;
 }
 
 .Icon::before,
-.Icon::after {
+.Icon::after,
+.Icon3::before,
+.Icon3::after,
+.Icon4::before,
+.Icon4::after{
     content: '';
     width: 2rem;
     height: 0.3rem;
@@ -62,12 +71,12 @@ input {
 }
 
 
-.Icon::before {
+.Icon::before, .Icon3::before, .Icon4::before {
     transform: rotate(45deg);
     left: -0.6rem;
 }
 
-.Icon::after {
+.Icon::after, .Icon3::after, .Icon4::after {
     transform: rotate(135deg);
     left: 0.6rem;
 }
@@ -83,14 +92,121 @@ input {
 }
 
 /* dropdown 1 */
-.dropdown1 {
-   padding: 0 2rem;
+.content {
+    padding: 0 2.5rem;
+    text-align: left;
     max-height: 0;
     overflow: hidden;
     background-color: #f1f1f1;
+    border-bottom: solid #000;
     transition: all 0.8s cubic-bezier(1, 0, 0, 1);
 }
 
-#toggle:checked ~ .dropdown1{
+#toggle:checked ~ .content{
     max-height: 100vh;
 }
+
+/* MY SKILLS SECTION */
+
+.mySkills{
+    background-image: url('./images/mySkills.png');
+    background-repeat: repeat;
+    text-align: center ;
+}
+
+.musashi2{
+    margin: auto;
+    width: 470px;
+}
+
+.Icon2::before,
+.Icon2::after {
+    content: '';
+    width: 2rem;
+    height: 0.3rem;
+    background-color: black;
+    position: absolute;
+    display: block;
+    transition: all 0.6s cubic-bezier(1, 0, 0, 1);
+}
+
+
+.Icon2::before {
+    transform: rotate(45deg);
+    left: -0.6rem;
+}
+
+.Icon2::after {
+    transform: rotate(135deg);
+    left: 0.6rem;
+}
+
+#toggle2:checked~.Icon2::after {
+    transform: rotate(-135deg);
+
+}
+
+#toggle2:checked~.Icon2::before {
+    transform: rotate(-45deg);
+}
+
+#toggle2:checked ~ .content{
+    max-height: 100vh;
+}
+
+/* MY WORK SECTION */
+
+.myWork{
+    background-image: url('./images/myWork.png');
+    background-repeat: repeat;
+    position: relative;
+    text-align: center;
+}
+
+.musashi3{
+    width: 380px;
+    margin: auto;
+}
+
+#toggle3:checked~.Icon3::after {
+    transform: rotate(-135deg);
+
+}
+
+
+#toggle3:checked~.Icon3::before {
+    transform: rotate(-45deg);
+}
+#toggle3:checked ~ .content{
+    max-height: 100vh;
+}
+
+/* SOCIAL MEDIA SECTION */
+
+.socialMedia{
+    background-image: url('./images/socialMedia.png');
+    background-repeat: repeat-x;
+    text-align: center;
+}
+.musashi4{
+    margin:auto;
+}
+
+#toggle4:checked~.Icon4::after {
+    transform: rotate(-135deg);
+
+}
+
+#toggle4:checked~.Icon4::before {
+    transform: rotate(-45deg);
+}
+#toggle4:checked ~ .content{
+    max-height: 100vh;
+}
+/*footer*/
+
+footer{
+    text-align: center;
+    font-family: Inter, sans-serif;
+}
+
