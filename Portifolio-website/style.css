@@ -338,14 +338,14 @@ footer {
 }
 
 .SCcontainer img {
-    width: 15vw;
+    width: 7vw;
 }
 
 .user {
     text-align: center;
     padding: 15px;
     font-family: Inter, sans-serif;
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: 500;
 }
 
