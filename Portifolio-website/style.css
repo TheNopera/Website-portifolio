@@ -387,8 +387,9 @@ footer {
     /*MY WORK SECTION*/
     .MWcontainer {
         text-align: center;
+        padding:0;
     }
-
+    
     .preview img {
         width: 100%;
         height: auto;
@@ -400,12 +401,11 @@ footer {
         justify-content: center;
         text-align: center;
         border: none;
+        border-bottom: 2px dotted #000 ;
     }
-    .projectTitle{
-        font-size: 4vw;
-    }
+
     .description {
-        font-size: 3vw;
+        font-weight:normal;
         text-align: left;
         padding: 0;
     }
@@ -513,4 +513,24 @@ footer {
         left: -0rem;
     }
 
+    .user{
+        display: flex;  
+        padding: 3px 0;
+        text-align: center;
+    }
+
+    .logo{
+        display: flex;
+        gap: 10px;
+    }
+
+    .logo img{
+        width: 5vw;
+    }
+
+    .SCcontainer{
+        flex-direction: column ;
+        gap: 10px;
+
+    }
 }
